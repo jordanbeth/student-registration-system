@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/layout.xhtml">
+
+	<ui:define name="header">
+		<h6>Enter a Student's last name</h6>
+
+	</ui:define>
+
+	<ui:define name="content">
+		<h:form class="text-center">
+
+			<h:inputText value="#{registrationLookupBean.lastName}" />
+			&nbsp;
+			<h:commandButton class="btn btn-primary space-right"
+				action="#{registrationLookupBean.lookup()}" value="Search" />
+			<h:commandButton class="btn btn-secondary" value="Home"
+				action="#{registrationLookupBean.home()}"></h:commandButton>
+		</h:form>
+
+		<h:panelGroup rendered="#{not empty registrationLookupBean.message}">
+			<div class="container bottom-30">
+				<p class="#{registrationLookupBean.styleClass} text-center">#{registrationLookupBean.message}</p>
+			</div>
+		</h:panelGroup>
+
+		<h:panelGroup
+			rendered="#{not empty registrationLookupBean.studentResults}">
+
+			<div class="font-15 extra-wide">
+				<ol>
+					<ui:repeat var="student"
+						value="#{registrationLookupBean.studentResults}">
+						<li><span class="student-name">#{student.lastName},
+								#{student.firstName}</span> <h:dataTable value="#{student.courses}"
+								var="course" styleClass="table-condensed">
+								<h:column>
+									<f:facet name="header">Course Id</f:facet> 
+								#{course.courseId}
+   								</h:column>
+
+								<h:column>
+									<f:facet name="header">Course Title</f:facet>
+     						 	#{course.courseTitle}
+   								</h:column>
+							</h:dataTable></li>
+					</ui:repeat>
+				</ol>
+			</div>
+		</h:panelGroup>
+
+	</ui:define>
+</ui:composition>
+</html>

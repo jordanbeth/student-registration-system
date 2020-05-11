@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+.form-header {
+	padding: 8px 8px 10px;
+}
+
+.center-lg-form-div {
+	max-width: 800px;
+	padding: 15px;
+	margin: auto;
+}
+
+.center-md-form-div {
+	max-width: 600px;
+	padding: 15px;
+	margin: auto;
+}
+
+.center-sm-form-div {
+	max-width: 450px;
+	padding: 15px;
+	margin: auto;
+}
+
+.register-header {
+	padding-bottom: 10px;
+}
+
+.body-container {
+	padding: 3%;
+}
+
+.auto-side {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.auto {
+	margin: auto;
+}
+
+.space-right {
+	margin-right: 4px;
+}
+
+.no-padding {
+	padding: 0px;
+}
+
+.status-report-container {
+	padding: 4% 0% 0% 6%;
+	border: 1px solid black;
+}
+
+.home-submit-btn {
+	margin-left: 6%;
+}
+
+.login-field {
+	max-width: 300px;
+}
+
+.top-bar {
+	background-color: cornflowerblue;
+	color: black;
+	border: 1px solid;
+	text-align: center;
+	font-size: 35px;
+	padding: 10px;
+}
+
+.student-name {
+	font-weight: bold;
+	text-align: left;
+	text-decoration: underline;
+}
+
+.font-15 {
+	font-size: 15px;
+}
+
+.extra-wide {
+	width: 110%;
+}
+
+.bottom-30 {
+	position: relative;
+	top: 30px;
+}
+
+li {
+	margin-bottom: 1%;
+}
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	padding-bottom: 6rem;
+	min-height: 100%;
+}
+
+/**
+ * Footer Style
+ */
+#footer {
+	background-color: lightgray;
+	height: 100px;
+	width: 100%;
+	border: 1px solid;
+	text-align: center;
+	line-height: 100px;
+	font-weight: bold;
+	font-size: 16px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}

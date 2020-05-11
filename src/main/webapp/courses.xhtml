@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/layout.xhtml">
+
+	<ui:define name="header">
+		<h4>Select the course to register and click on Submit:</h4>
+
+	</ui:define>
+
+	<ui:define name="content">
+		<h:messages errorStyle="color: red" infoStyle="color: green"
+			globalOnly="true" />
+		<h:form class="text-center">
+
+			<h:selectOneMenu value="#{coursesSupportBean.selectedCourseAsString}">
+				<f:selectItems value="#{coursesSupportBean.coursesAsStrings}" />
+			</h:selectOneMenu>
+			<br />
+			<br />
+
+			<h:commandButton class="btn btn-primary space-right"
+				action="#{registrationSupportBean.register()}" value="Register" />
+			<h:commandButton class="btn btn-secondary" value="Home"
+				action="#{registrationSupportBean.home()}"></h:commandButton>
+		</h:form>
+		<br />
+		<div class="container text-center">
+			<h:form>
+				<p>
+					or click on
+					<h:commandButton class="btn btn-link no-padding" value="Logout"
+						action="#{registrationSupportBean.logout()}"></h:commandButton>
+				</p>
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

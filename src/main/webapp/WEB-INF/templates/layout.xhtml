@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title><ui:insert name="title">SRS</ui:insert></title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
+</h:head>
+
+<h:body>
+
+	<div class="top-bar">
+		<h1>Student Registration Site</h1>
+	</div>
+
+	<div class="container container-fluid body-container">
+		<div class="container text-center">
+			<ui:insert name="header">
+			</ui:insert>
+		</div>
+
+		<div class="content center-sm-form-div">
+			<ui:insert name="content">
+			</ui:insert>
+		</div>
+	</div>
+
+	<div id="footer">
+		<ui:insert name="footer">
+			<h:outputText value="SRS © 2020" />
+		</ui:insert>
+	</div>
+
+</h:body>
+</html>
